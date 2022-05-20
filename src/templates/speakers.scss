@@ -1,0 +1,119 @@
+@import '../colors';
+@import '../fonts';
+
+.talk_summary {
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    padding: {
+        top: 18px;
+        right: 12px;
+        bottom: 18px;
+        left: 12px;
+    }
+    @media only screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(2,minmax(3rem,auto));
+        grid-gap: 2rem;
+        padding: {
+            top: 24px;
+            right: 32px;
+            bottom: 24px;
+            left: 32px;
+        }
+    }
+    &_lead {
+        margin-bottom: 15px;
+        @media only screen and (min-width: 1024px) {
+            grid-column: 1/span 2;
+        }
+    }
+    &_column {
+        @media only screen and (min-width: 1024px) {
+
+        }
+    }
+    &_name {
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    &_title {
+        color: $js-red;
+        font: {
+            family: $font-secondary;
+            size: 20px;
+        }
+        line-height: 22px;
+    }
+    &_wrapper {
+        border-radius: 100%;
+        overflow: hidden;
+        &_image {
+            display: block;
+            max-width: 100%;
+        }
+    }
+    &_links {
+        margin: {
+            top: 24px;
+            bottom: 24px;
+        }
+        &_item {
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+            &::before {
+                background: {
+                    position: center center;
+                    size: contain;
+                }
+                content: '';
+                display: inline-block;
+                height: 16px;
+                margin-right: 6px;
+                width: 16px;
+            }
+            &_from::before {
+                background-image: url('./icon-location.png');
+            }
+            &_twitter::before {
+                background-image: url('./icon-twitter.png');
+            }
+            &_github::before {
+                background-image: url('./icon-github.png');
+            }
+            &_company::before {
+                background-image: url('./icon-office.png');
+            }
+        }
+    }
+    &_text {
+        & p {
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+        & *:last-child {
+            margin-bottom: 15px;
+        }
+    }
+    &_description {
+        border-top: 1px solid #cfcfcf;
+        font-weight: 400;
+        line-height: 23px;
+        padding-top: 15px;
+    }
+
+    &_picture {
+        
+            width: 12rem;
+            height: 12rem;
+            position: relative;
+        
+        
+        .image {
+            z-index: 1;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+    }
+}

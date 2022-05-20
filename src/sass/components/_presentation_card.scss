@@ -1,0 +1,80 @@
+.presentation {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    padding: {
+        top: 20px;
+        right: 15px;
+        bottom: 20px;
+        left: 15px;
+    }
+    position: relative;
+    max-width: 360px;
+    &:not(:last-child) {
+        margin-bottom: 18px;
+    }
+    &.isOver {
+        box-shadow: none;
+        opacity: .7;
+    }
+    &_time {
+        color: $js-red;
+        font: {
+            family: $font-secondary;
+            weight: 700;
+        }
+    }
+    &_name {
+        font: {
+            size: 20px;
+            weight: 700;
+        }
+        margin: {
+            top: 15px;
+            bottom: 10px;
+        }
+    }
+    &_description {
+        margin: {
+            bottom: 15px;
+        }
+    }
+    &_link {
+        &::after {
+            content: ' →';
+        }
+    }
+    &_live {
+        animation: pulse 2s infinite;
+        background-color: $js-red;
+        border-radius: 20px;
+        box-shadow: 0 0 0 rgba($js-red, .4);
+        color: #fff;
+        font: {
+            size: 13px;
+            weight: 700;
+        }
+        padding: {
+            top: 5px;
+            right: 12px;
+            bottom: 5px;
+            left: 12px;
+        }
+        position: absolute;
+        text-transform: uppercase;
+        top: 18px;
+        right: 16px;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 rgba($js-red, .4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba($js-red, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba($js-red, 0);
+    }
+}

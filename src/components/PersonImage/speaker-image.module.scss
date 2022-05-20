@@ -1,0 +1,69 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+
+.speaker_image {
+  position: relative;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+
+  &.orange {
+    background-color: $color-lightorange;
+  }
+  &.purple {
+    background-color: $color-lightpurple;
+  }
+
+  &.center {
+    transform: rotate(13deg);
+    transform-origin: center center;
+    justify-self: center;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 1rem;
+  }
+
+  .image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+
+    @media (max-width: 480px) {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.up {
+      transform: rotate(-13deg);
+      transform-origin: top left;
+
+      .image_data {
+        transform: scale(1.2) rotate(13deg);
+        transform-origin: center;
+      }
+    }
+
+    &.down {
+      transform: rotate(-13deg);
+      transform-origin: bottom right;
+
+      .image_data {
+        transform: scale(1.2) rotate(13deg);
+        transform-origin: center;
+      }
+    }
+
+    &.center {
+      transform: rotate(-26deg);
+      transform-origin: center;
+
+      .image_data {
+        transform: scale(1.2) rotate(13deg);
+        transform-origin: center;
+      }
+    }
+  }
+}

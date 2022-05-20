@@ -1,0 +1,40 @@
+@import '../../colors.scss';
+
+.page-title {
+    text-align: center;
+}
+
+.page-header {
+    margin-bottom: 18px;
+
+    &_wrapper {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: {
+            right: auto;
+            left: auto;
+        }
+        max-width: 800px;
+    }
+}
+
+.page-logo {
+    display: block;
+    height: 60px;
+    margin-right: 12px;
+    width: 60px;
+    &_img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.page-title {
+    color: #fff;
+    font: {
+        family: $font-secondary;
+        size: 18px;
+    }
+    line-height: 26px;
+}

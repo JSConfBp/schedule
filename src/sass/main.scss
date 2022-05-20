@@ -1,0 +1,184 @@
+$js-blue: #3480c2;
+$js-green: #43a447;
+$js-red: #db3026;
+$js-yellow: #f2de48;
+
+$font-primary: Roboto, sans-serif;
+$font-secondary: 'Space Mono', monospace;
+
+@import 'reset';
+@import 'components/presentation_card';
+@import 'components/talk_summary';
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: $js-red;
+    text-decoration: underline;
+    &:hover, &:focus {
+        color: darken($js-red, 15%);
+        text-decoration: none;
+        
+    }
+}
+
+body {
+    background-color: darken($js-blue, 18%);
+    font: {
+        family: $font-primary;
+        size: 18px;
+        weight: 200;
+    }
+    padding: 10px;
+    &::before {
+        border-style: solid;
+        border-width: 0 calc(100vw / 2) calc(100vh) 0;
+        border-color: transparent darken($js-red, 15%) transparent transparent;
+        content: '';
+        height: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 0;
+        z-index: -1;
+    }
+}
+
+.page-header {
+    margin-bottom: 36px;
+    &_wrapper {
+        align-items: center;
+        display: flex;
+        margin: {
+            right: auto;
+            left: auto;
+        }
+        max-width: 800px;
+    }
+}
+
+.page-logo {
+    display: block;
+    height: 60px;
+    margin-right: 12px;
+    width: 60px;
+    &_img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.page-title {
+    color: #fff;
+    font: {
+        family: $font-secondary;
+        size: 18px;
+    }
+    line-height: 26px;
+}
+
+.triangle {
+    display: none;
+    bottom: 0;
+    fill: darken($js-red, 15%);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    z-index: -1;
+}
+
+.site{
+    &_content {
+        margin: {
+            right: auto;
+            left: auto;
+        }
+        max-width: 800px;
+        &_back {
+            background-color: #fff;
+            border-radius: 6px;
+            color: #000;
+            display: inline-block;
+            font-weight: 700;
+            margin-bottom: 32px;
+            padding: {
+                top: 12px;
+                right: 24px;
+                bottom: 12px;
+                left: 16px;
+            }
+            text-decoration: none;
+        }
+    }
+    &_footer {
+        background-color: darken($js-blue, 12%);
+        border-radius: 6px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        margin: {
+            top: 40px;
+            bottom: 15px;
+        }
+        padding: {
+            top: 12px;
+            right: 12px;
+            bottom: 12px;
+            left: 12px;
+        }
+        &_nav {
+            font-size: 16px;
+            text-align: center;
+            &_list {
+                &_item {
+                    display: inline;
+                    margin: {
+                        right: 12px;
+                        left: 12px;
+                    }
+                    &_link {
+                        color: #fff;
+                        &:hover, &:focus {
+                            color: #eaeaea;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.days {
+    margin-bottom: 30px;
+    &_link {
+        background-color: $js-yellow;
+        border-radius: 6px;
+        color: #000;
+        display: inline-block;
+        font: {
+            family: $font-secondary;
+            size: 18px;
+            weight: 700;
+        }
+        padding: {
+            top: 12px;
+            right: 32px;
+            bottom: 12px;
+            left: 32px;
+        }
+        text: {
+            align: center;
+            decoration: none;
+        }
+        &:first-of-type {
+            margin-right: 24px;
+        }
+        &:hover, &:focus {
+            background-color: lighten($js-yellow, 10%);
+        }
+        &:active {
+            background-color: darken($js-yellow, 15%);
+        }
+    }
+}
