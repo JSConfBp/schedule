@@ -2,14 +2,9 @@
 @import '../fonts';
 
 .talk_summary {
-    background-color: #f9f9f9;
-    border-radius: 6px;
-    padding: {
-        top: 18px;
-        right: 12px;
-        bottom: 18px;
-        left: 12px;
-    }
+    background-color: #fff;
+    margin: 16px;
+    padding: 16px;
     @media only screen and (min-width: 1024px) {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -28,26 +23,21 @@
             grid-column: 1/span 2;
         }
     }
-    &_column {
-        @media only screen and (min-width: 1024px) {
-
-        }
-    }
     &_name {
+        color: $color-orange;
         font-weight: 700;
-        margin-bottom: 15px;
+        margin-top: 12px;
     }
     &_title {
-        color: $js-red;
+        color: $color-rebeccapurple;
         font: {
-            family: $font-secondary;
             size: 20px;
+            weight: 700;
         }
-        line-height: 22px;
+        line-height: 1.4rem;
+        margin: 0;
     }
     &_wrapper {
-        border-radius: 100%;
-        overflow: hidden;
         &_image {
             display: block;
             max-width: 100%;

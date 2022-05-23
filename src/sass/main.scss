@@ -79,17 +79,6 @@ body {
     line-height: 26px;
 }
 
-.triangle {
-    display: none;
-    bottom: 0;
-    fill: darken($js-red, 15%);
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    z-index: -1;
-}
-
 .site{
     &_content {
         margin: {

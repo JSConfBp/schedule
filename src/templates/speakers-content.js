@@ -15,22 +15,14 @@ function SpeakersContentTemplate({ data: { mdx } }) {
 
   return (
     <>
-      <svg
-        className="triangle"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 262 830"
-      >
-        <path d="M262 830L1 0h261.8l-.8 830z" />
-      </svg>
-      <Header />
       <main className="site_content">
         <Link className="site_content_back" to="/">
           ← Back
         </Link>
         <section className="talk_summary">
           <div className="talk_summary_lead">
-            <h3 className="talk_summary_name">{name}</h3>
             <h2 className="talk_summary_title">{title}</h2>
+            <h3 className="talk_summary_name">{name}</h3>
           </div>
           <div>
             <div className="talk_summary_profile">

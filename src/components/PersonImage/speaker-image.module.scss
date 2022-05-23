@@ -37,7 +37,7 @@
     }
 
     &.up {
-      transform: rotate(-13deg);
+      transform: rotate(-8deg);
       transform-origin: top left;
 
       .image_data {
@@ -47,7 +47,7 @@
     }
 
     &.down {
-      transform: rotate(-13deg);
+      transform: rotate(-8deg);
       transform-origin: bottom right;
 
       .image_data {

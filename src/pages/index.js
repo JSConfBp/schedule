@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import classnames from 'classnames'
-import Header from '../components/Header'
 import Footer from '../components/Footer'
 import PresentationCard from '../components/PresentationCard'
 
@@ -50,30 +49,30 @@ const IndexPage = (props) => {
 
   return (
     <>
-      <svg
-        className="triangle"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 262 830"
-      >
-        <path d="M262 830L1 0h261.8l-.8 830z" />
-      </svg>
-      <Header />
       <main className="site_content">
         <section className="schedule">
-          <div className="days">
-            <a
-              className={classnames('days_link', day === 'js1' ? 'active' : '')}
-              onClick={() => setDay('js1')}
-            >
-              Day 1
-            </a>
-            <a
-              className={classnames('days_link', day === 'js2' ? 'active' : '')}
-              onClick={() => setDay('js2')}
-            >
-              Day 2
-            </a>
-          </div>
+          <nav>
+            <ol className="days">
+              <li className="days_item">
+                <a
+                  href="#"
+                  className={classnames('days_link', day === 'js1' ? 'active' : '')}
+                  onClick={() => setDay('js1')}
+                >
+                  June 2nd - First day
+                </a>
+              </li>
+              <li className="days_item">
+                <a
+                  href="#"
+                  className={classnames('days_link', day === 'js2' ? 'active' : '')}
+                  onClick={() => setDay('js2')}
+                >
+                  June 3rd - Second day
+                </a>
+              </li>
+            </ol>
+          </nav>
 
           {Object.entries(schedule).map(([event, program]) => (
             <div

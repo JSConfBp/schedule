@@ -7,10 +7,10 @@
 }
 
 a {
-    color: $js-red;
+    color: $color-rebeccapurple;
     text-decoration: underline;
     &:hover, &:focus {
-        color: darken($js-red, 15%);
+        color: darken($color-rebeccapurple, 15%);
         text-decoration: none;
     }
 }
@@ -23,13 +23,10 @@ html, body {
     }
 }
 body {
-    background-color: darken($js-blue, 18%);
-    
-    padding: 10px;
     &::before {
         border-style: solid;
-        border-width: 0 calc(100vw / 2) calc(100vh) 0;
-        border-color: transparent darken($js-red, 15%) transparent transparent;
+        border-width: 0 85vw 58vh 0;
+        border-color: transparent $color-lightorange transparent transparent;
         content: '';
         height: 0;
         position: fixed;
@@ -40,32 +37,18 @@ body {
     }
 }
 
-
-.triangle {
-    display: none;
-    bottom: 0;
-    fill: darken($js-red, 15%);
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    z-index: -1;
-}
-
 .site{
     &_content {
-        margin: {
-            right: auto;
-            left: auto;
-        }
-        max-width: 800px;
         &_back {
             background-color: #fff;
-            border-radius: 6px;
             color: #000;
             display: inline-block;
             font-weight: 700;
-            margin-bottom: 32px;
+            margin: {
+                top: 18px;
+                bottom: 20px;
+                left: 16px;
+            }
             padding: {
                 top: 12px;
                 right: 24px;
@@ -76,12 +59,12 @@ body {
         }
     }
     &_footer {
-        background-color: darken($js-blue, 12%);
-        border-radius: 6px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        background-color: $color-rebeccapurple;
         margin: {
             top: 40px;
-            bottom: 15px;
+            right: 16px;
+            bottom: 16px;
+            left: 16px;
         }
         padding: {
             top: 12px;
@@ -123,54 +106,44 @@ body {
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
-
+    &_item {
+        flex-basis: 50%;
+    }
     &_link {
-
-        background-color: desaturate($js-yellow, 50%);
-        border-radius: 6px;
-        color: #000;
-
+        background-color: #624768;
+        color: rgba(255, 255, 255, 0.8);
+        display: block;
         font: {
-            family: $font-secondary;
             size: 18px;
             weight: 700;
         }
         padding: {
             top: 12px;
-            right: 32px;
-            bottom: 12px;
-            left: 32px;
+            right: 12px;
+            bottom: 15px;
+            left: 12px;
         }
         text: {
             align: center;
             decoration: none;
         }
-        &:first-of-type {
-            margin-right: 24px;
-        }
         &:hover,
         &:focus,
         &.active {
-            background-color: $js-yellow;
+            background-color: $color-darkpurple;
+            color: #fff;
         }
         &:active {
-            background-color: darken($js-yellow, 15%);
+            background-color: $color-darkpurple;
         }
     }
 }
 
 .content {
 	background-color: #f9f9f9;
-    border-radius: 6px;
-    padding: {
-        top: 18px;
-        right: 12px;
-        bottom: 18px;
-        left: 12px;
-	}
+    padding: 16px;
+    margin: 16px;
     position: relative;
-
-
     h2 {
         font: {
             size: 20px;
@@ -186,5 +159,18 @@ body {
         p {
             margin-bottom: 1rem;
         }
+    }
+}
+
+.schedule {
+    &::after {
+        background-color: $color-lightpurple;
+        content: "";
+        height: 100vh;
+        left: 20px;
+        position: fixed;
+        top: 0;
+        width: 2px;
+        z-index: -1;
     }
 }

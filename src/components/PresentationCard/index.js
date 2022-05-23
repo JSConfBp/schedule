@@ -12,24 +12,26 @@ export default ({ data, id, onAir }) => {
       <div className="presentation_time">
         <time dateTime={start}>{start}</time>
       </div>
-      <p className="presentation_name">{name}</p>
-      <p className="presentation_description">{title}</p>
+      <div className="presentation_wrapper">
+        <p className="presentation_description">{title}</p>
+        <p className="presentation_name">{name}</p>
 
-      {activities && (
-        <ul className="activities">
-          {activities.map((activity, i) => (
-            <li key={`activity_${i}`}>{activity}</li>
-          ))}
-        </ul>
-      )}
+        {activities && (
+          <ul className="activities">
+            {activities.map((activity, i) => (
+              <li key={`activity_${i}`}>{activity}</li>
+            ))}
+          </ul>
+        )}
 
-      {name && (
-        <Link className="presentation_link" to={`/speakers/${id}`}>
-          More details
-        </Link>
-      )}
+        {name && (
+          <Link className="presentation_link" to={`/speakers/${id}`}>
+            More details
+          </Link>
+        )}
 
-      {onAir && <span className="presentation_live">On air</span>}
+        {onAir && <span className="presentation_live">On air</span>}
+      </div>
     </div>
   )
 }
