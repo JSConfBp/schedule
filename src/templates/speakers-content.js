@@ -27,7 +27,10 @@ function SpeakersContentTemplate({ data: { mdx } }) {
           <div>
             <div className="talk_summary_profile">
               <div className="talk_summary_wrapper">
-                <SpeakerImage image={picture} className="talk_summary_picture" />
+                <SpeakerImage
+                  image={picture}
+                  className="talk_summary_picture"
+                />
               </div>
 
               <ul className="talk_summary_links">

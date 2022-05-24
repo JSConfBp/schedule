@@ -56,7 +56,10 @@ const IndexPage = (props) => {
               <li className="days_item">
                 <a
                   href="#"
-                  className={classnames('days_link', day === 'js1' ? 'active' : '')}
+                  className={classnames(
+                    'days_link',
+                    day === 'js1' ? 'active' : ''
+                  )}
                   onClick={() => setDay('js1')}
                 >
                   June 2nd - First day
@@ -65,7 +68,10 @@ const IndexPage = (props) => {
               <li className="days_item">
                 <a
                   href="#"
-                  className={classnames('days_link', day === 'js2' ? 'active' : '')}
+                  className={classnames(
+                    'days_link',
+                    day === 'js2' ? 'active' : ''
+                  )}
                   onClick={() => setDay('js2')}
                 >
                   June 3rd - Second day
