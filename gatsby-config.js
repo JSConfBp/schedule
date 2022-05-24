@@ -50,7 +50,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'jsconf-budapest-booklet',
-        short_name: 'jsconfbp-booklet',
+        short_name: 'JSConf Budapest 2022',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
