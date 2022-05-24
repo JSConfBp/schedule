@@ -2,7 +2,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'http://schedule.jsconfbp.com/',
-    title: 'Info Screen',
+    title: 'JSConf Budapest 2022 Schedule',
     description: '',
     keywords: '',
     twitter: '@jsconfbp'
