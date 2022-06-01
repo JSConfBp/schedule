@@ -89,7 +89,7 @@ module.exports = {
 		'1830': {
 			title: 'Closing JSConf Budapest 2022 & Family photo',
 		},
-		'19:00': {
+		'1900': {
 			title: 'Farewell party',
 			activities: [
 			]
